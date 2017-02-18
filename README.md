@@ -18,4 +18,4 @@ Cookies 'N Cream,
 Black Cherry Vanilla,
 Rainbow Sherbet,
 Lemon Sorbet,
-Raspberry,
+Raspberry
