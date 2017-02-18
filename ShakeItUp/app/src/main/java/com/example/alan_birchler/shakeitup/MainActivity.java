@@ -1,6 +1,7 @@
 package com.example.alan_birchler.shakeitup;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         TextView weekendsTime = (TextView)findViewById(R.id.weekendstime);
 
         deetsHours.setTypeface(pacificoFont);
+        deetsHours.setPaintFlags(deetsHours.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         weekDays.setTypeface(pacificoFont);
         weekDaysTime.setTypeface(pacificoFont);
         weekends.setTypeface(pacificoFont);
