@@ -3,6 +3,8 @@ package com.example.alan_birchler.shakeitup;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -18,7 +20,7 @@ public class ShakeItActivity extends AppCompatActivity {
     String[]         flavor1Words;
     String[]         flavor2Words;
     String[]         outputs;
-
+    private Switch   toggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,10 @@ public class ShakeItActivity extends AppCompatActivity {
         mixedFlavor = (TextView) findViewById(R.id.mixedflavor);
         firstFlavor = (TextView) findViewById(R.id.firstflavor);
         secondFlavor = (TextView) findViewById(R.id.secondflavor);
+
+        //Switch initialization
+        toggle = (Switch) findViewById(R.id.switch1);
+        toggle.setChecked(false);
 
         this.populateArray();
         //this.shakeItUp();
@@ -137,10 +143,18 @@ public class ShakeItActivity extends AppCompatActivity {
 
     public void shakeItUp(View view)
     {
-        outputs = this.pickTwoFlavors();
-        firstFlavor.setText(outputs[0]);
-        secondFlavor.setText(outputs[1]);
-        mixedFlavor.setText(outputs[2]);
+        if (toggle.isChecked()) {
+            outputs = this.pickThreeFlavors();
+            firstFlavor.setText(outputs[0]);
+            secondFlavor.setText(outputs[1]);
+            mixedFlavor.setText(outputs[3]);
+        }
+        else {
+            outputs = this.pickTwoFlavors();
+            firstFlavor.setText(outputs[0]);
+            secondFlavor.setText(outputs[1]);
+            mixedFlavor.setText(outputs[2]);
+        }
     }
 
     public String[] getFlavors()
