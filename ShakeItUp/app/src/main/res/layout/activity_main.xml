@@ -14,7 +14,24 @@
         android:text="Shake It Up!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />< Updated upstream
         android:id="@+id/shakebutton"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+=======
+        android:layout_marginTop="106dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="31dp"
+        tools:ignore="HardcodedText" />
+>>>>>>> Stashed changes
 </RelativeLayout>
