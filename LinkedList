@@ -25,6 +25,7 @@ public class LinkedList<T> {
 
     private int size;
     private Node<T> head;
+<<<<<<< HEAD
 
     public LinkedList()
     {
@@ -61,6 +62,44 @@ public class LinkedList<T> {
         size++;
     }
 
+=======
+
+    public LinkedList()
+    {
+      head = new  Node<T>(null);
+      size = 0;
+    }
+
+    public int size() {
+      return size;
+    }
+
+    public T get(int index){
+      return getNodeAtIndex(index).getData();
+    }
+
+    private Node<T> getNodeAtIndex(int index)
+     {
+         if (index < 0 || size() <= index) {
+             throw new IndexOutOfBoundsException("No element exists at "
+                     + index);
+         }
+         Node<T> current = head.next();
+         for (int i = 0; i < index; i++) {
+             current = current.next();
+         }
+         return current;
+     }
+
+    public void add(T newEntry)
+    {
+        Node<T> newNode = new Node<T>(newEntry);
+        newNode.setNext(head.next());
+        head.setNext(newNode);
+        size++;
+    }
+    
+>>>>>>> master
     public boolean isEmpty() {
         return (size == 0);
     }

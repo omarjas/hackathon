@@ -11,7 +11,56 @@
     tools:context="com.example.alan_birchler.shakeitup.MainActivity">
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/deetshours"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        tools:text="Deets Hours"
+        android:layout_below="@+id/shakebutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_below="@+id/deetshours"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        tools:text="Weekdays:" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        tools:text="7:30 AM to 12 AM" />
+
+    <Button
+        android:text="What's On the Menu?"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/menubutton"
+        android:textSize="20sp"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Shake It Up!"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:id="@+id/shakebutton"
+        android:textSize="40sp"
+        android:layout_marginTop="176dp"
+        android:layout_alignTop="@+id/menubutton"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
