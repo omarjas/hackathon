@@ -1,0 +1,34 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class ShakeItUpTest
+{
+
+    private ShakeItUp shake;
+
+
+    public void setUp() throws Exception
+    {
+        shake = new ShakeItUp();
+        shake.populateArray();
+    }
+
+
+    @Test
+    public void test()
+    {
+
+        String[] twoFlavors = shake.pickTwoFlavors();
+        String[] threeFlavors = shake.pickThreeFlavors();
+
+        System.out.println("Mix " + twoFlavors[0] + " and " + twoFlavors[1]
+            + " to get " + twoFlavors[2] + "!");
+
+        System.out.println("Mix " + threeFlavors[0] + ", " + threeFlavors[1]
+            + ", and " + threeFlavors[2] + " to get " + threeFlavors[3] + "!");
+
+        assertNotNull(twoFlavors);
+        assertNotNull(threeFlavors);
+    }
+
+}
