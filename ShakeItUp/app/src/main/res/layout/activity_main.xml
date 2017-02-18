@@ -19,8 +19,8 @@
         android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_red_light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_format" />
 
     <Button
         android:text="@string/shake"
@@ -33,7 +33,8 @@
         android:layout_below="@+id/menubutton"
         android:layout_centerHorizontal="true"
         android:background="@android:color/holo_red_light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_format" />
 
     <TextView
         android:text="Deet's Hours"

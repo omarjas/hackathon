@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background_material_light">#f5e9e9</color>
+    <color name="switch_thumb_disabled_material_light">#b59e9e</color>
+    <color name="switch_thumb_normal_material_light">#d7acac</color>
+    <color name="button_material_light">#000000</color>
 </resources>
