@@ -25,7 +25,6 @@ public class LinkedList<T> {
 
     private int size;
     private Node<T> head;
-<<<<<<< HEAD
 
     public LinkedList()
     {
@@ -98,7 +97,7 @@ public class LinkedList<T> {
         head.setNext(newNode);
         size++;
     }
-    
+
 >>>>>>> master
     public boolean isEmpty() {
         return (size == 0);
