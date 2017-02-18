@@ -11,56 +11,76 @@
     tools:context="com.example.alan_birchler.shakeitup.MainActivity">
 
     <TextView
-        android:text="TextView"
+        android:text="Deet's Hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/deetshours"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        tools:text="Deets Hours"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_marginTop="14dp"
         android:layout_below="@+id/shakebutton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="TextView"
+        android:text="7:30 AM to 12 AM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:id="@+id/weekdaystime"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_below="@+id/weekdays"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Weekdays:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weekdays"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_below="@+id/deetshours"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        tools:text="Weekdays:" />
+        android:layout_marginTop="12dp" />
 
     <TextView
-        android:text="TextView"
+        android:text="Weekends:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:id="@+id/textView3"
+        android:id="@+id/weekends"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/weekdaystime"
         android:layout_centerHorizontal="true"
-        tools:text="7:30 AM to 12 AM" />
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:text="10 AM to 12 AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weekendstime"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_below="@+id/weekends"
+        android:layout_alignStart="@+id/deetshours" />
 
     <Button
         android:text="What's On the Menu?"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:onClick="menu"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
         android:id="@+id/menubutton"
         android:textSize="20sp"
-        android:layout_marginTop="70dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white" />
 
     <Button
-        android:text="Shake It Up!"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:text="@string/shake"
+        android:onClick="shake"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:id="@+id/shakebutton"
-        android:textSize="40sp"
-        android:layout_marginTop="176dp"
-        android:layout_alignTop="@+id/menubutton"
-        android:layout_centerHorizontal="true" />
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/menubutton"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

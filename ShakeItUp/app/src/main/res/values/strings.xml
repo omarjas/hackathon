@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShakeItUp</string>
+    <string name="shake">Shake it up!</string>
 </resources>
