@@ -1,5 +1,6 @@
 package com.example.alan_birchler.shakeitup;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class ShakeItActivity extends AppCompatActivity {
     private TextView mixedFlavor;
     private TextView firstFlavor;
     private TextView secondFlavor;
+    private TextView thirdFlavor;
     private String   flavors[] = new String[16];
     int              flavor1;
     int              flavor2;
@@ -29,12 +31,18 @@ public class ShakeItActivity extends AppCompatActivity {
         mixedFlavor = (TextView) findViewById(R.id.mixedflavor);
         firstFlavor = (TextView) findViewById(R.id.firstflavor);
         secondFlavor = (TextView) findViewById(R.id.secondflavor);
+        thirdFlavor = (TextView) findViewById(R.id.thirdflavor);
 
         //Switch initialization
         toggle = (Switch) findViewById(R.id.switch1);
         toggle.setChecked(false);
 
         this.populateArray();
+        Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "Pacifico.ttf");
+        mixedFlavor.setTypeface(pacificoFont);
+        firstFlavor.setTypeface(pacificoFont);
+        secondFlavor.setTypeface(pacificoFont);
+        thirdFlavor.setTypeface(pacificoFont);
         //this.shakeItUp();
     }
 
@@ -147,6 +155,7 @@ public class ShakeItActivity extends AppCompatActivity {
             outputs = this.pickThreeFlavors();
             firstFlavor.setText(outputs[0]);
             secondFlavor.setText(outputs[1]);
+            thirdFlavor.setText(outputs[2]);
             mixedFlavor.setText(outputs[3]);
         }
         else {
