@@ -16,6 +16,8 @@ public class ShakeItActivity extends AppCompatActivity {
     private TextView firstFlavor;
     private TextView secondFlavor;
     private TextView thirdFlavor;
+    private TextView mix;
+    private TextView toGet;
     private String   flavors[] = new String[16];
     int              flavor1;
     int              flavor2;
@@ -23,6 +25,7 @@ public class ShakeItActivity extends AppCompatActivity {
     String[]         flavor2Words;
     String[]         outputs;
     private Switch   toggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +35,22 @@ public class ShakeItActivity extends AppCompatActivity {
         firstFlavor = (TextView) findViewById(R.id.firstflavor);
         secondFlavor = (TextView) findViewById(R.id.secondflavor);
         thirdFlavor = (TextView) findViewById(R.id.thirdflavor);
+        mix = (TextView) findViewById(R.id.mix);
+        toGet = (TextView) findViewById(R.id.toget);
 
         //Switch initialization
         toggle = (Switch) findViewById(R.id.switch1);
         toggle.setChecked(false);
 
         this.populateArray();
+
         Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "Pacifico.ttf");
         mixedFlavor.setTypeface(pacificoFont);
         firstFlavor.setTypeface(pacificoFont);
         secondFlavor.setTypeface(pacificoFont);
         thirdFlavor.setTypeface(pacificoFont);
+        mix.setTypeface(pacificoFont);
+        toGet.setTypeface(pacificoFont);
         //this.shakeItUp();
     }
 
@@ -114,7 +122,7 @@ public class ShakeItActivity extends AppCompatActivity {
         }
         while (flavor3 == flavor2 || flavor3 == flavor1)
         {
-            flavor2 = random.nextInt(16);
+            flavor3 = random.nextInt(16);
         }
 
         // combine names of flavors
