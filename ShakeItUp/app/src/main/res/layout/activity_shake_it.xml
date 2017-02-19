@@ -22,7 +22,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:text="Re-Shake"
+        android:text="Shake It Up"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/reshake"
@@ -44,7 +44,8 @@
         android:textSize="28sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="28dp"
+        android:fontFamily="serif" />
 
     <TextView
         android:text="2 Flavors"
@@ -56,14 +57,18 @@
         android:textSize="28sp"
         android:layout_alignBaseline="@+id/flavors3"
         android:layout_alignBottom="@+id/flavors3"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:fontFamily="serif" />
 
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/switch1"
         android:layout_alignBottom="@+id/flavors3"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:switchMinWidth="60dp"
+        android:thumbTint="@color/colorPrimary"
+        />
 
     <TextView
         android:text="Mix:"
@@ -75,7 +80,8 @@
         android:textSize="24sp"
         android:layout_marginTop="23dp"
         android:layout_below="@+id/switch1"
-        android:layout_alignStart="@+id/switch1" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"

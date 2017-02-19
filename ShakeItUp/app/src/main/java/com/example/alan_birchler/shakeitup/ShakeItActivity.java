@@ -1,5 +1,6 @@
 package com.example.alan_birchler.shakeitup;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ public class ShakeItActivity extends AppCompatActivity {
     private TextView firstFlavor;
     private TextView secondFlavor;
     private TextView thirdFlavor;
+    private TextView flavorsthree;
+    private TextView flavorstwo;
     private TextView mix;
     private TextView toGet;
     private String   flavors[] = new String[16];
@@ -31,6 +34,9 @@ public class ShakeItActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shake_it);
 
+        flavorsthree = (TextView) findViewById(R.id.flavors3);
+        flavorsthree.setTextColor(Color.parseColor("#8FF75549"));
+        flavorstwo = (TextView) findViewById(R.id.flavors2);
         mixedFlavor = (TextView) findViewById(R.id.mixedflavor);
         firstFlavor = (TextView) findViewById(R.id.firstflavor);
         secondFlavor = (TextView) findViewById(R.id.secondflavor);
@@ -42,6 +48,19 @@ public class ShakeItActivity extends AppCompatActivity {
         toggle = (Switch) findViewById(R.id.switch1);
         toggle.setChecked(false);
 
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    flavorsthree.setTextColor(Color.parseColor("#FFF75549"));
+                    flavorstwo.setTextColor(Color.parseColor("#8FF75549"));
+                }
+                else {
+                    flavorstwo.setTextColor(Color.parseColor("#FFF75549"));
+                    flavorsthree.setTextColor(Color.parseColor("#8FF75549"));
+                }
+            }
+        });
         this.populateArray();
 
         Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "Pacifico.ttf");
@@ -51,7 +70,8 @@ public class ShakeItActivity extends AppCompatActivity {
         thirdFlavor.setTypeface(pacificoFont);
         mix.setTypeface(pacificoFont);
         toGet.setTypeface(pacificoFont);
-        //this.shakeItUp();
+
+
     }
 
     public void populateArray()
@@ -170,6 +190,7 @@ public class ShakeItActivity extends AppCompatActivity {
             firstFlavor.setText(outputs[0]);
             secondFlavor.setText(outputs[1]);
             mixedFlavor.setText(outputs[2]);
+            thirdFlavor.setText("&");
         }
     }
 
