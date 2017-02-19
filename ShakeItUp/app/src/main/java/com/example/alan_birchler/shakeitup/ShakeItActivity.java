@@ -149,8 +149,7 @@ public class ShakeItActivity extends AppCompatActivity {
 
     }
 
-    public void shakeItUp(View view)
-    {
+    public void shakeItUp(View view){
         if (toggle.isChecked()) {
             outputs = this.pickThreeFlavors();
             firstFlavor.setText(outputs[0]);
