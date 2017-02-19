@@ -21,12 +21,30 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Butter Cup"
+        android:text="Butter Pecan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView11"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
         android:id="@+id/textView20" />
+
+    <TextView
+        android:text="Fudge Tracks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/textView21"
+        android:layout_below="@+id/textView20"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Mint Chocolate Chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView21"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:id="@+id/textView22" />
 
 </RelativeLayout>

@@ -91,7 +91,7 @@ public class ShakeItActivity extends AppCompatActivity {
         flavors[12] = "Black Cherry Vanilla";
         flavors[13] = "Rainbow Sherbet";
         flavors[14] = "Lemon Sorbet";
-        flavors[15] = "Rainbow Sorbet";
+        flavors[15] = "Raspberry Sorbet";
     }
 
 
